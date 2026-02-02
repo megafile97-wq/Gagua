@@ -1,0 +1,174 @@
+:root {
+    --bg: #0f172a;
+    --card: #111827;
+    --border: #1f2937;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --green: #22c55e;
+    --red: #ef4444;
+    --blue: #3b82f6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+}
+
+.app {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.header p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* Cards */
+.card {
+    background: linear-gradient(180deg, #111827, #020617);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+/* Form */
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+label {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+input {
+    background: #020617;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 15px;
+    color: var(--text);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+/* Botões */
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #052e16;
+}
+
+/* Lista de clientes */
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cliente {
+    background: linear-gradient(180deg, #111827, #020617);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+}
+
+.cliente strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.cliente span {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* Botões + e - */
+.botoes {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+}
+
+.botoes button {
+    flex: 1;
+}
+
+.botoes button:first-child {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #052e16;
+}
+
+.botoes button:last-child {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: #7f1d1d;
+}
+
+/* Mobile feel */
+@media (max-width: 480px) {
+    .app {
+        padding: 14px;
+    }
+}
+.vendas h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.vendas .valor {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 10px 0 15px;
+    color: #22c55e;
+}
+
+/* Botão de zerar */
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: #7f1d1d;
+}
