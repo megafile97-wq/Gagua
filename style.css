@@ -164,7 +164,30 @@ color: #22c55e;
 input[type="date"] {
 background: #020617;
 color: #e5e7eb;
-border: 1px solid #374151;
+border: 0px solid #374151;
 padding: 8px;
 border-radius: 8px;
+}
+#dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.dia {
+    padding: 8px 0;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #1f2937;
+    color: #e5e7eb;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dia:hover {
+    background: #22c55e;
+    color: #022c22;
+    transform: scale(1.05);
 }
