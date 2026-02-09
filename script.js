@@ -421,4 +421,4 @@ function gerarPDFMensal() {
     }
 
     doc.save(`relatorio-${mes}-${ano}.pdf`);
-}
+        }
