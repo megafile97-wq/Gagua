@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Garrafões</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#22c55e">
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+<header class="header">
+    <h1>Controle de Garrafões</h1>
+    <p>Vendas e dívidas</p>
+</header>
+
+<!-- CALENDÁRIO -->
+<section class="card calendario">
+    <h2>Escolha a data</h2>
+    <div>
+        Mês:
+        <input type="number" id="mes" min="1" max="12" value="1" onchange="gerarDias()">
+        Ano:
+        <input type="number" id="ano" min="2000" max="2100" value="2026" onchange="gerarDias()">
+    </div>
+
+    <div id="dias" style="margin-top:10px"></div>
+
+    <button class="btn-primary" onclick="gerarPDFMensal()">
+        📄 Gerar PDF do mês
+    </button>
+
+    <!-- LISTA DE FIADOS DO MÊS -->
+    <div class="fiados-mes">
+        <h3>Fiados do mês</h3>
+        <div id="listaFiados"></div>
+    </div>
+</section>
+
+<!-- GRÁFICO MENSAL -->
+<section class="card grafico">
+    <h2>Gráfico mensal</h2>
+    <canvas id="graficoMes"></canvas>
+</section>
+
+<!-- FORMULÁRIO -->
+<section class="card form">
+    <div class="field">
+        <label>Nome do cliente</label>
+        <input type="text" id="nome" placeholder="Ex: João Silva">
+    </div>
+
+    <div class="field">
+        <label>Preço do garrafão (R$)</label>
+        <input type="number" id="preco" value="0">
+    </div>
+
+    <button class="btn-primary" onclick="adicionarCliente()">
+        Cadastrar cliente
+    </button>
+</section>
+
+<!-- VENDAS DO DIA -->
+<section class="card vendas">
+    <h2>Vendas do dia</h2>
+
+    <p class="valor"
+       id="vendasDia"
+       onclick="editarVendasDoDia()"
+       style="cursor:pointer">
+        R$ 0,00
+    </p>
+
+    <button class="btn-danger" onclick="zerarVendas()">
+        Zerar vendas do dia
+    </button>
+
+    <button class="btn-primary" onclick="mostrarCalendario()">
+        ⬅ Voltar para o calendário
+    </button>
+</section>
+
+<!-- LISTA DE CLIENTES -->
+<section id="listaClientes" class="lista"></section>
+
+</div>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- AutoTable para tabela no PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+
+<!-- Chart.js (gráfico) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Script principal -->
+<script src="script.js"></script>
+
+<!-- Service Worker -->
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registrado"))
+        .catch(err => console.log("Erro no Service Worker", err));
+}
+</script>
+
+</body>
+</html>

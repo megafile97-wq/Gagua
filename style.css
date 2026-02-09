@@ -1,0 +1,244 @@
+/* ===== RESET ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  }
+
+body {
+background: #0f172a;
+color: #e5e7eb;
+}
+
+/* ===== CONTAINER ===== */
+.app {
+max-width: 600px;
+margin: auto;
+padding: 16px;
+}
+
+/* ===== HEADER ===== */
+.header {
+background: linear-gradient(135deg, #15803d, #22c55e);
+color: white;
+padding: 18px;
+border-radius: 14px;
+margin-bottom: 16px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+text-align: center;
+}
+
+.header h1 {
+font-size: 22px;
+font-weight: 700;
+margin-bottom: 4px;
+}
+
+.header p {
+font-size: 14px;
+opacity: 0.9;
+}
+
+/* ===== CARDS ===== */
+.card {
+background: #111827;
+padding: 16px;
+border-radius: 14px;
+margin-bottom: 14px;
+box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+border: 1px solid #1f2933;
+}
+
+/* ===== CAMPOS ===== */
+.field {
+margin-bottom: 12px;
+}
+
+.field label {
+font-size: 14px;
+font-weight: 600;
+display: block;
+margin-bottom: 4px;
+color: #9ca3af;
+}
+
+.field input {
+width: 100%;
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #374151;
+font-size: 15px;
+background: #020617;
+color: #e5e7eb;
+}
+
+/* ===== BOTÕES ===== */
+button {
+border: none;
+padding: 10px 14px;
+border-radius: 10px;
+font-size: 14px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+button:hover {
+transform: translateY(-1px);
+}
+
+.btn-primary {
+background: #22c55e;
+color: white;
+width: 100%;
+margin-top: 6px;
+}
+
+.btn-primary:hover {
+background: #16a34a;
+}
+
+.btn-danger {
+background: #ef4444;
+color: white;
+width: 100%;
+margin-top: 6px;
+}
+
+.btn-danger:hover {
+background: #dc2626;
+}
+
+/* ===== LISTA DE CLIENTES ===== */
+.cliente {
+background: #020617;
+padding: 12px;
+border-radius: 12px;
+margin-bottom: 12px;
+border: 1px solid #1f2937;
+}
+
+.topo-cliente {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 8px;
+}
+
+.btn-excluir {
+background: #ef4444;
+color: white;
+padding: 6px 10px;
+font-size: 12px;
+border-radius: 8px;
+}
+
+/* ===== BOTÕES DE VENDA ===== */
+.botoes {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 6px;
+margin-top: 8px;
+}
+
+.botoes button {
+background: #1f2937;
+color: #e5e7eb;
+}
+
+.botoes button:hover {
+background: #374151;
+}
+
+/* ===== VALOR DO DIA ===== */
+.valor {
+font-size: 26px;
+font-weight: bold;
+text-align: center;
+margin: 10px 0;
+color: #22c55e;
+}
+
+/* ===== INPUT DE DATA ===== */
+input[type="date"] {
+background: #020617;
+color: #e5e7eb;
+border: 0px solid #374151;
+padding: 8px;
+border-radius: 8px;
+}
+#dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.dia {
+    padding: 8px 0;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #1f2937;
+    color: #e5e7eb;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dia:hover {
+    background: #22c55e;
+    color: #022c22;
+    transform: scale(1.05);
+}
+.fiado-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1f2933;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.fiado-bola {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.fiado-dados {
+    flex: 1;
+}
+
+.fiado-nome {
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.fiado-info {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.fiado-pagar {
+    background: #22c55e;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.fiado-pagar:hover {
+    background: #16a34a;
+}
